@@ -1,253 +1,32 @@
 # AmountEngineService. ConfirmPurchaseAttempt
 
-A continuación se listan todas las request referentes al servicio de **ConfirmPruchaseAttempt**:
+A continuación se listan todas las request referentes al servicio de **ConfirmPurchaseAttempt**:
 
-- [All parameters](#1)
-- [Without adjustments (promotion-line, manual-line, Manual-order, promotion-delivery)](#2)
-- [Neither adjustments (promotion-line, manual-line, Manual-order, promotion-delivery) nor promotion codes](#3)
-- [Without promotion codes](#4)
-- [Without lines](#5)
-- [Neither lines nor adjustment (promotion-line, manual-line)](#6)
-- [Without adjustment (Manual-order)](#7)
-- [Neither adjustment (Manual-order) nor promotion code](#8)
-- [Neither lines nor adjustment (Manual-order)](#9)
-- [Neither promotion code nor lines](#10)
-- [Neither promotion_code nor lines nor adjustment](#11)
-- [Without adjustments belonging to Lines](#12)
-- [Without adjustments belonging to Lines and without promotion code](#13)
-- [Without adjustments belonging to Lines and without promotion code and without ajustments](#14)
+- [All parameters](#all-parameters)
+- [Without adjustments (promotion-line, manual-line, Manual-order, promotion-delivery)](#without-adjustments-promotion-line)
+- [Neither promotion codes nor adjustments (promotion-line, manual-line, Manual-order, promotion-delivery)](#neither-promotion-code-nor-adjustments)
+- [Without promotion codes](#without-promotion-codes)
+- [Without lines](#without-lines)
+- [Neither lines nor adjustments (promotion-line, manual-line)](#neither-lines-nor-adjustments)
+- [Without adjustments (Manual-order)](#without-adjustments-manual-order)
+- [Neither adjustments (Manual-order) nor promotion code](#neither-adjustments-manual-order-nor-promotion-code)
+- [Neither lines nor adjustments (Manual-order)](#neither-lines-nor-adjustments)
+- [Neither promotion code nor lines](#neither-promotion-code-nor-lines)
+- [Neither promotion code nor lines nor adjustments](#neither-promotion-code-nor-lines-nor-adjustments)
+- [Without adjustments belonging to Lines](#without-adjustments-belonging-to-lines)
+- [Neither adjustments belonging to Lines and without promotion code](#neither-adjustments-belonging-to-lines-nor-promotion-code)
+- [Neither ajustments nor promotion code nor adjustments belonging to lines](#neither-adjustments-nor-promotion-code-nor-adjustments-belonging-to-lines)
+- [Without order id](#without-order-id)
+- [Without store id](#without-store-id)
+- [Without delivery](#without-delivery)
+
 ## All parameters
 ### Request
-```
-curl -X POST \
+```sh		
+$ curl -X POST \
   http://develop-mecfamemic.axdesocp1.central.inditex.grp/amiga/grpc-invoker \
   -H 'Content-Type: application/json' \
-  -d '{
-   "fullMethodName":"appmicmeccameng.v1.AmountEngineService/ConfirmPurchaseAttempt",
-   "payload":{
-      "store_id":{
-         "value":10701
-      },
-      "id":{
-         "value":"123456"
-      },
-      "owner_id":{
-         "value":11111
-      },
-      "delivery":{
-          "delivery_method_id":{
-             "value":"EXPRESS"
-          },
-          "price":{
-               "price": {
-                    "value": {
-                          "value": 250
-                    },
-                    "currency": {
-                          "value": "EUR"
-                    }
-               }
-           }
-       },
-      "lines":[
-         {
-            "id":{
-                "value":1
-             },
-            "quantity":{
-                "value":3
-             },
-            "reference_id":{
-                "value":173803
-               },
-            "product_id":{
-                "value":2222
-               },
-            "parent_id":{
-                "value":3333
-               },
-            "category_id":{
-                "value":1111
-               },
-            "type":"PRODUCT",
-            "price": {
-                 "price": {
-                      "value": {
-                          "value": 2000
-                      },
-                      "currency": {
-                          "value": "EUR"
-                      }
-                 }
-             },
-            "adjustments": [
-               {
-                  "amount": {
-                     "value": {
-                         "value": -180
-                     },
-                     "currency": {
-                         "value": "EUR"
-                     }
-                  },
-                  "type": "MANUAL",
-                  "entity": "LINE"
-               },
-               {
-                  "amount": {
-                     "value": {
-                         "value": -70
-                     },
-                     "currency": {
-                         "value": "EUR"
-                     }
-                  },
-                  "type": "MANUAL",
-                  "entity": "LINE"
-               },
-               {
-                  "amount": {
-                     "value": {
-                         "value": -800
-                     },
-                     "currency": {
-                         "value": "EUR"
-                     }
-                  },
-                  "type": "PROMOTION",
-                  "entity": "LINE"
-               }
-            ]
-          },
-          {
-            "id":{
-               "value":2
-            },
-            "quantity":{
-               "value":2
-            },
-            "reference_id":{
-               "value":180321
-            },
-            "type":"PRODUCT",
-            "price": {
-                 "price": {
-                      "value": {
-                          "value": 500
-                      },
-                      "currency": {
-                          "value": "EUR"
-                      }
-                 }
-             },
-            "adjustments": [
-               {   
-                  "amount": {        
-                       "value": {
-                           "value": -50
-                       },
-                       "currency": {
-                           "value": "EUR"
-                       }
-                  },
-                  "type": "MANUAL",
-                  "entity": "LINE"
-               },
-               {
-                  "amount": {
-                      "value": {
-                          "value": -230
-                      },
-                      "currency": {
-                          "value": "EUR"
-                      }
-                  },
-                  "type": "PROMOTION",
-                  "entity": "LINE"
-               }
-            ]
-          }
-       ],
-       "adjustments": [
-            {
-              "amount": {
-                   "value": {
-                        "value": -503
-                   },
-                   "currency": {
-                        "value": "EUR"
-                   }
-              },
-              "type": "MANUAL",
-              "entity": "LINE"
-            },
-            {
-              "amount": {
-                   "value": {
-                        "value": -500
-                   },
-                   "currency": {
-                        "value": "EUR"
-                   }
-              },
-              "type": "MANUAL",
-              "entity": "LINE"
-            },
-            {
-              "amount": {
-                   "value": {
-                        "value": -200
-                   },
-                   "currency": {
-                        "value": "EUR"
-                   }
-              },
-              "type": "MANUAL",
-              "entity": "ORDER"
-            },
-            {
-              "amount": {
-                 "value": {
-                      "value": -65
-                 },
-                 "currency": {
-                      "value": "EUR"
-                 }
-              },
-              "type": "PROMOTION",
-              "entity": "DELIVERY"
-            },
-            {
-              "amount": {
-                 "value": {
-                      "value": -100
-                 },
-                 "currency": {
-                      "value": "EUR"
-                 }
-              },
-              "type": "PROMOTION",
-              "entity": "LINE"
-            }
-       ],
-        "promotion_codes" : [
-          {
-            "value": "PROMOTION_CODE"
-          }
-       ],
-        "device":{
-           "channel":{
-               "value":"CHANNEL"
-           },
-           "type":{
-               "value":"TYPE"
-           },
-           "os":{
-               "value":"OS"
-           }
-        }
-    }
-}'
+  -d '{"fullMethodName":"appmicmeccameng.v1.AmountEngineService/ConfirmPurchaseAttempt","payload":{"store_id":{"value":10701},"id":{"value":"123456"},"owner_id":{"value":11111},"delivery":{"delivery_method_id":{"value":"EXPRESS"},"price":{"price":{"value":{"value":250},"currency":{"value":"EUR"}}}},"lines":[{"id":{"value":1},"quantity":{"value":3},"reference_id":{"value":173803},"product_id":{"value":2222},"parent_id":{"value":3333},"category_id":{"value":1111},"type":"PRODUCT","price":{"price":{"value":{"value":2000},"currency":{"value":"EUR"}}},"adjustments":[{"amount":{"value":{"value":-180},"currency":{"value":"EUR"}},"type":"MANUAL","entity":"LINE"},{"amount":{"value":{"value":-70},"currency":{"value":"EUR"}},"type":"MANUAL","entity":"LINE"},{"amount":{"value":{"value":-800},"currency":{"value":"EUR"}},"type":"PROMOTION","entity":"LINE"}]},{"id":{"value":2},"quantity":{"value":2},"reference_id":{"value":180321},"type":"PRODUCT","price":{"price":{"value":{"value":500},"currency":{"value":"EUR"}}},"adjustments":[{"amount":{"value":{"value":-50},"currency":{"value":"EUR"}},"type":"MANUAL","entity":"LINE"},{"amount":{"value":{"value":-230},"currency":{"value":"EUR"}},"type":"PROMOTION","entity":"LINE"}]}],"adjustments":[{"amount":{"value":{"value":-503},"currency":{"value":"EUR"}},"type":"MANUAL","entity":"LINE"},{"amount":{"value":{"value":-500},"currency":{"value":"EUR"}},"type":"MANUAL","entity":"LINE"},{"amount":{"value":{"value":-200},"currency":{"value":"EUR"}},"type":"MANUAL","entity":"ORDER"},{"amount":{"value":{"value":-65},"currency":{"value":"EUR"}},"type":"PROMOTION","entity":"DELIVERY"},{"amount":{"value":{"value":-100},"currency":{"value":"EUR"}},"type":"PROMOTION","entity":"LINE"}],"promotion_codes":[{"value":"PROMOTION_CODE"}],"device":{"channel":{"value":"CHANNEL"},"type":{"value":"TYPE"},"os":{"value":"OS"}}}}'
 ```
 
 - DEV
@@ -859,15 +638,18 @@ curl -X POST \
   - Response
 - PRE-LT
   - Response
-## Neither adjustments (promotion-line, manual-line, Manual-order, promotion-delivery) nor promotion codes
+## Neither promotion codes nor adjustments (promotion-line, manual-line, Manual-order, promotion-delivery)
 ## Without promotion codes
 ## Without lines
-## Neither lines nor adjustment (promotion-line, manual-line)
-## Without adjustment (Manual-order)
-## Neither adjustment (Manual-order) nor promotion code
-## Neither lines nor adjustment (Manual-order)
+## Neither lines nor adjustments (promotion-line, manual-line)
+## Without adjustments (Manual-order)
+## Neither adjustments (Manual-order) nor promotion code
+## Neither lines nor adjustments (Manual-order)
 ## Neither promotion code nor lines
-## Neither promotion_code nor lines nor adjustment
+## Neither promotion code nor lines nor adjustments
 ## Without adjustments belonging to Lines
-## Without adjustments belonging to Lines and without promotion code
-## Without adjustments belonging to Lines and without promotion code and without ajustments
+## Neither adjustments belonging to Lines nor without promotion code
+## Neither adjustments nor promotion code nor ajustments belonging to lines
+## Without order id
+## Without store id
+## Without delivery
