@@ -3,22 +3,22 @@
 A continuación se listan todas las request referentes al servicio de **ConfirmPurchaseAttempt**:
 
 - [All parameters](#all-parameters)
-- [Without adjustments (promotion-line, manual-line, Manual-order, promotion-delivery)](#without-adjustments-promotion-line)
-- [Neither promotion codes nor adjustments (promotion-line, manual-line, Manual-order, promotion-delivery)](#neither-promotion-code-nor-adjustments)
-- [Without promotion codes](#without-promotion-codes)
-- [Without lines](#without-lines)
-- [Neither lines nor adjustments (promotion-line, manual-line)](#neither-lines-nor-adjustments)
-- [Without adjustments (Manual-order)](#without-adjustments-manual-order)
+- [No adjustments](#no-adjustments)
+- [Neither promotion codes nor any adjustments](#neither-promotion-codes-nor-any-adjustments)
+- [No promotion codes](#no-promotion-codes)
+- [No lines](#no-lines)
+- [Neither lines nor adjustments (promotion-line, manual-line)](#neither-lines-nor-adjustments-promotion-line)
+- [No adjustments (Manual-order)](#no-adjustments-manual-order)
 - [Neither adjustments (Manual-order) nor promotion code](#neither-adjustments-manual-order-nor-promotion-code)
-- [Neither lines nor adjustments (Manual-order)](#neither-lines-nor-adjustments)
+- [Neither lines nor adjustments (Manual-order)](#neither-lines-nor-adjustments-manual-order)
 - [Neither promotion code nor lines](#neither-promotion-code-nor-lines)
 - [Neither promotion code nor lines nor adjustments](#neither-promotion-code-nor-lines-nor-adjustments)
-- [Without adjustments belonging to Lines](#without-adjustments-belonging-to-lines)
-- [Neither adjustments belonging to Lines and without promotion code](#neither-adjustments-belonging-to-lines-nor-promotion-code)
-- [Neither ajustments nor promotion code nor adjustments belonging to lines](#neither-adjustments-nor-promotion-code-nor-adjustments-belonging-to-lines)
-- [Without order id](#without-order-id)
-- [Without store id](#without-store-id)
-- [Without delivery](#without-delivery)
+- [No adjustments belonging to lines](#no-adjustments-belonging-to-lines)
+- [Neither adjustments belonging to lines nor promotion code](#neither-adjustments-belonging-to-lines-nor-promotion-code)
+- [Neither adjustments nor promotion code nor adjustments belonging to lines](#neither-adjustments-nor-promotion-code-nor-adjustments-belonging-to-lines)
+- [No order id](#no-order-id)
+- [No store id](#no-store-id)
+- [No delivery](#no-delivery)
 
 ## All parameters
 ### Request
@@ -624,7 +624,7 @@ $ curl -X POST \
 }
 ```
 
-## Without adjustments (promotion-line, manual-line, Manual-order, promotion-delivery)
+## No adjustments
 ### Request
 ```
 
@@ -638,18 +638,18 @@ $ curl -X POST \
   - Response
 - PRE-LT
   - Response
-## Neither promotion codes nor adjustments (promotion-line, manual-line, Manual-order, promotion-delivery)
-## Without promotion codes
-## Without lines
-## Neither lines nor adjustments (promotion-line, manual-line)
-## Without adjustments (Manual-order)
+## Neither promotion codes nor any adjustments
+## No promotion codes
+## No lines
+## Neither lines nor adjustments (Promotion-line, manual-line)
+## No adjustments (Manual-order)
 ## Neither adjustments (Manual-order) nor promotion code
 ## Neither lines nor adjustments (Manual-order)
 ## Neither promotion code nor lines
 ## Neither promotion code nor lines nor adjustments
-## Without adjustments belonging to Lines
-## Neither adjustments belonging to Lines nor without promotion code
+## No adjustments belonging to lines
+## Neither adjustments belonging to lines nor without promotion code
 ## Neither adjustments nor promotion code nor ajustments belonging to lines
-## Without order id
-## Without store id
-## Without delivery
+## No order id
+## No store id
+## No delivery
