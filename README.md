@@ -8,7 +8,7 @@ Each service has been associated with a markdown file where the requests can be 
 * [ConfirmPurchaseAttempt](README_ConfirmPurchaseAttempt.md). 
 
 
-* [CalculateDeliveryPromotion](README_CalculateDeliveryPromotion.md)
+* CalculateDeliveryPromotion
 
 ### Environments:
 The services will be launched in the following environments:
@@ -22,4 +22,6 @@ The services will be launched in the following environments:
 * PRE-LT:
   * [https://prelt-mecfamemic-purchase-private.za.axpreecocp1.central.inditex.grp/amiga/grpc-invoker](https://prelt-mecfamemic-purchase-private.za.axpreecocp1.central.inditex.grp/amiga/grpc-invoker)
 
-
+### Postman Collection
+* [ConfirmPurchaseAttempt](https://axinic.central.inditex.grp/confluence/pages/viewpage.action?pageId=421567170)
+* CalculateDeliveryPromotion
