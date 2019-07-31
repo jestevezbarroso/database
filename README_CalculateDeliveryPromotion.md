@@ -6,9 +6,9 @@ All requests regarding the **CalculateDeliveryPromotion** service are listed bel
 - [No any adjustments](#no-any-adjustments)
 - [Neither any adjustments nor promotion codes](#neither-any-adjustments-nor-promotion-codes)
 - [No promotion codes](#no-promotion-codes)
-- [No delivery options](#[no-delivery-options)
-- [No delivery options (Standard)](#no-deliveryooptions-standard)
-- [No delivery options (Express)](##no-deliveryooptions-express)
+- [No delivery options](#no-delivery-options)
+- [No delivery options (Standard)](#no-delivery-options-standard)
+- [No delivery options (Express)](#no-delivery-options-express)
 - [Neither delivery options nor any adjustments](#neither-delivery-options-nor-any-adjustments)
 - [Neither delivery options (Express) nor adjustments (Manual-delivery)](#neither-delivery-options-express-nor-adjustments-manual-delivery)
 - [Neither delivery options (Standard) nor adjustments (Manual-delivery)](#neither-delivery-options-standard-nor-adjustments-manual-delivery)
@@ -16,7 +16,7 @@ All requests regarding the **CalculateDeliveryPromotion** service are listed bel
 - [Neither delivery options nor adjustments (Manual-delivery)](#neither-delivery-options-nor-adjustments-manual-delivery)
 - [Neither promotion codes nor delivery options](#neither-promotion-codes-nor-delivery-options)
 - [Neither promotion codes nor delivery options nor adjustments](#neither-promotion-codes-nor-delivery-options-nor-adjustments)
-- [Neither promotion codes nor ajustments (Manual-delivery)](#neither-promotion-codes-nor-adjustments-manual-delivery)
+- [Neither promotion codes nor adjustments (Manual-delivery)](#neither-promotion-codes-nor-adjustments-manual-delivery)
 
 
 ## All parameters
@@ -397,7 +397,7 @@ $
 ```json
 
 ```
-## Neither promotion codes nor ajustments (Manual-delivery)
+## Neither promotion codes nor adjustments (Manual-delivery)
 ### Request
 - DEV
 ```sh	
