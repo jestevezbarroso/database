@@ -8,7 +8,7 @@ Each service has been associated with a markdown file where the requests can be 
 * [ConfirmPurchaseAttempt](README_ConfirmPurchaseAttempt.md). 
 
 
-* CalculateDeliveryPromotion
+* [CalculateDeliveryPromotion](README_CalculateDeliveryPromotion.md)
 
 ### Environments:
 The services will be launched in the following environments:
