@@ -20,7 +20,7 @@ All requests regarding the **ConfirmPurchaseAttempt** service are listed below:
 - [No store id](#no-store-id)
 - [No delivery](#no-delivery)
 
-## All parameters
+## All parameters#all-parameters
 ### Request
 - DEV
 ```sh		
